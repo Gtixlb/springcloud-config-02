@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: client-config         #名字一定要和GitHub仓库中的配置文件的名字一样
+  cloud:
+    config:
+      label: master       #指明远程仓库的分支
+      profile: dev        #指开发环境配置文件
+      uri: http://localhost:8888/         #指明配置服务中心的网址。
+server:
+  port: 8889
