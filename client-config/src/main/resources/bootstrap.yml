@@ -5,6 +5,13 @@ spring:
     config:
       label: master       #指明远程仓库的分支
       profile: dev        #指开发环境配置文件
-      uri: http://localhost:8888/         #指明配置服务中心的网址。
+      #uri: http://localhost:8888/         #指明配置服务中心的网址。
+      discovery:
+        enabled: true
+        service-id: server-config
 server:
   port: 8889
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
